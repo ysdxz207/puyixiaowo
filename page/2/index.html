@@ -47,45 +47,29 @@
         
         
         <article class="box">
-            <h1 class="title"><a href="//puyixiaowo.win/post/git%E4%BD%BF%E7%94%A8gae%E4%BB%A3%E7%90%86/">git使用gae代理</a></h1>
-            <h2 class="subtitle is-6">2017-05-08</h2>
-            
-            <div class="tags">
-    
-        <a class="tag is-primary" href="/tags/git">git</a>
-    
-        <a class="tag is-primary" href="/tags/gae">gae</a>
-    
-</div>
-
-            
-            <div class="content">
-                
-                
-                用户目录下.gitconfig配置如下:
-[user] email = xxx@qq.com name = xxx [http] proxy = http://127.0.0.1:8087 sslVerify = false [https] proxy = http://127.0.0.1:8087 sslVerify = false  
-                
-            </div>
-        </article>
-        
-        <article class="box">
-            <h1 class="title"><a href="//puyixiaowo.win/post/mybatis-generator%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/">mybatis-generator配置说明</a></h1>
-            <h2 class="subtitle is-6">2017-04-26</h2>
+            <h1 class="title"><a href="//puyixiaowo.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">mybatis延迟加载导致dubbo值为null解决办法</a></h1>
+            <h2 class="subtitle is-6">2017-02-21</h2>
             
             <div class="tags">
     
         <a class="tag is-primary" href="/tags/mybatis">mybatis</a>
     
+        <a class="tag is-primary" href="/tags/dubbo">dubbo</a>
+    
+        <a class="tag is-primary" href="/tags/%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD">延迟加载</a>
+    
 </div>
 
             
             <div class="content">
                 
                 
-                mybatis generator config
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;!DOCTYPE generatorConfiguration PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration...
+                场景条件：
+1、bean里有两个属性：
+private String subjectCategoryName;//分类名 private String className;//班级分类名称  2、使用mybatis嵌套查询：
+&lt;association property=&quot;className&quot; fetchType=&quot;eager&quot;...
                 
-                    <a class="button read-more" href="//puyixiaowo.win/post/mybatis-generator%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/" style="height:28px">
+                    <a class="button read-more" href="//puyixiaowo.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" style="height:28px">
                         查看更多
                         <span class="icon is-small">
                             <i class="fa fa-angle-double-right"></i>
@@ -96,12 +80,14 @@
         </article>
         
         <article class="box">
-            <h1 class="title"><a href="//puyixiaowo.win/post/mysql-%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2n%E6%9D%A1/">mysql 随机查询n条</a></h1>
-            <h2 class="subtitle is-6">2017-04-25</h2>
+            <h1 class="title"><a href="//puyixiaowo.win/post/%E4%BD%BF%E7%94%A8jquery-%E7%9A%84data%E5%87%BD%E6%95%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">使用jquery 的data()函数注意事项</a></h1>
+            <h2 class="subtitle is-6">2015-11-04</h2>
             
             <div class="tags">
     
-        <a class="tag is-primary" href="/tags/%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2">随机查询</a>
+        <a class="tag is-primary" href="/tags/jquery">jquery</a>
+    
+        <a class="tag is-primary" href="/tags/data">data</a>
     
 </div>
 
@@ -109,27 +95,24 @@
             <div class="content">
                 
                 
-                DROP TABLE IF EXISTS test_random; CREATE TABLE `test_random` ( `id` int(11) NOT NULL AUTO_INCREMENT, `create_time` datetime DEFAULT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; DROP...
-                
-                    <a class="button read-more" href="//puyixiaowo.win/post/mysql-%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2n%E6%9D%A1/" style="height:28px">
-                        查看更多
-                        <span class="icon is-small">
-                            <i class="fa fa-angle-double-right"></i>
-                        </span>
-                    </a>
+                这种写法在jquery缓存中保存的key并不是kindType，而是kind-type，故此$(&lsquo;#test&rsquo;).data(&lsquo;kindType&rsquo;)是取不到值的。此处要注意
                 
             </div>
         </article>
         
         <article class="box">
-            <h1 class="title"><a href="//puyixiaowo.win/post/%E5%88%A9%E7%94%A8github-pages%E5%92%8Chugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">利用github pages和hugo搭建个人博客</a></h1>
-            <h2 class="subtitle is-6">2017-04-15</h2>
+            <h1 class="title"><a href="//puyixiaowo.win/post/mysql%E4%BD%BF%E7%94%A8left-join%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%90%8E%E9%87%8D%E5%A4%8D%E5%AF%BC%E8%87%B4sum%E9%87%8D%E5%A4%8D%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">mysql使用left join（一对多）后重复导致sum重复相加问题解决</a></h1>
+            <h2 class="subtitle is-6">2015-10-23</h2>
             
             <div class="tags">
     
-        <a class="tag is-primary" href="/tags/hugo">hugo</a>
+        <a class="tag is-primary" href="/tags/mysql">mysql</a>
     
-        <a class="tag is-primary" href="/tags/%E5%8D%9A%E5%AE%A2">博客</a>
+        <a class="tag is-primary" href="/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A">一对多</a>
+    
+        <a class="tag is-primary" href="/tags/sum">sum</a>
+    
+        <a class="tag is-primary" href="/tags/%E9%87%8D%E5%A4%8D">重复</a>
     
 </div>
 
@@ -137,41 +120,9 @@
             <div class="content">
                 
                 
-                hugo生成静态网站，sass+bulma布局，grunt监控压缩css以及生成搜索索引文件， 放弃使用gulp是因为node-sass总是安装不上。全文搜索引擎使用lunr.js,因为lunr 不支持中文分词，故此使用segment分词配合使用中文修改版lunr
-全局安装grunt npm install -g grunt-cli
-grunt需要ruby 然后安装sass
-gem install...
-                
-                    <a class="button read-more" href="//puyixiaowo.win/post/%E5%88%A9%E7%94%A8github-pages%E5%92%8Chugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="height:28px">
-                        查看更多
-                        <span class="icon is-small">
-                            <i class="fa fa-angle-double-right"></i>
-                        </span>
-                    </a>
-                
-            </div>
-        </article>
-        
-        <article class="box">
-            <h1 class="title"><a href="//puyixiaowo.win/post/%E5%88%A0%E9%99%A4%E6%B3%A8%E9%87%8A%E7%A9%BA%E8%A1%8C%E6%AD%A3%E5%88%99/">删除注释空行正则</a></h1>
-            <h2 class="subtitle is-6">2017-03-06</h2>
-            
-            <div class="content">
-                
-                
-                /\*{1,2}[\s\S]*?\*/|\/\/.+|^\s*\n  
-                
-            </div>
-        </article>
-        
-        <article class="box">
-            <h1 class="title"><a href="//puyixiaowo.win/post/idea-live-template/">idea live template</a></h1>
-            <h2 class="subtitle is-6">2017-03-06</h2>
-            
-            <div class="content">
-                
-                
-                /** * * @author feihong * @date $DATETIME$ */ groovyScript(&quot;return new Date().format('yyyy-MM-dd HH:mm:ss')&quot;, methodParameters())  
+                http://stackoverflow.com/questions/2436284/mysql-sum-for-distinct-rows
+示例：
+sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总和 / 重复次数 重复次数= 查询总条数 / 每一组的条数 而每一组的sum和是我们所要的结果 所以 每一组的sum和 = sum后总和 * 每一组的条数 / 查询总条...
                 
             </div>
         </article>
@@ -182,18 +133,18 @@ gem install...
     <div class="level-left">
         <div class="level-item">
             
-            <button class="pagination-previous button is-disabled" disabled>
+            <a class="pagination-previous button is-primary" href="/">
                 <i class="fa fa-angle-double-left"></i>&nbsp;上一页
-            </button>
+            </a>
             
         </div>
     </div>
     <div class="level-right is-marginless">
         <div class="level-item">
             
-            <a class="pagination-previous button is-primary" href="/page/2/">
+            <button class="pagination-previous button is-disabled" disabled>
                 下一页&nbsp;<i class="fa fa-angle-double-right"></i>
-            </a>
+            </button>
             
         </div>
     </div>

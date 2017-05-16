@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on 飞鸿</title>
+    <link>//puyixiaowo.win/tags/data/</link>
+    <description>Recent content in Data on 飞鸿</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Wed, 04 Nov 2015 17:12:34 +0800</lastBuildDate>
+    
+	<atom:link href="//puyixiaowo.win/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用jquery 的data()函数注意事项</title>
+      <link>//puyixiaowo.win/post/%E4%BD%BF%E7%94%A8jquery-%E7%9A%84data%E5%87%BD%E6%95%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <pubDate>Wed, 04 Nov 2015 17:12:34 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/post/%E4%BD%BF%E7%94%A8jquery-%E7%9A%84data%E5%87%BD%E6%95%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <description>这种写法在jquery缓存中保存的key并不是kindType，而是kind-type，故此$(&amp;lsquo;#test&amp;rsquo;).data(&amp;lsquo;kindType&amp;rsquo;)是取不到值的。此处要注意</description>
+    </item>
+    
+  </channel>
+</rss>
