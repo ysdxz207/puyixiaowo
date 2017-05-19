@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>主从 on 飞鸿</title>
+    <link>//puyixiaowo.win/tags/%E4%B8%BB%E4%BB%8E/</link>
+    <description>Recent content in 主从 on 飞鸿</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Fri, 19 May 2017 17:22:37 +0800</lastBuildDate>
+    
+	<atom:link href="//puyixiaowo.win/tags/%E4%B8%BB%E4%BB%8E/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysql主从复制配置</title>
+      <link>//puyixiaowo.win/post/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 19 May 2017 17:22:37 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/post/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>1.两台机IP分别为：  `192.168.137.46`//主 `192.168.137.250`//从  2.主库配置：  修改配置文件 /etc/mysql/my.cnf
+[mysqld] server-id = 1 #主库的服务器ID log_bin = /var/log/mysql/mysql-bin.log #这里需要开启bin log binlog_do_db = db_tnews_news #需要同步的库 binlog_do_db = db_tnews_dictionary #需要同步的库 binlog_do_db = db_tnews_member #需要同步的库 binlog_do_db = db_tnews_manager #需要同步的库 #binlog_ignore_db = include_database_name #忽略的库  重启mysql服务
+service mysql restart &amp;gt; 这里因为我用的是mysql-server-5.5的所以是服务名是mysql
+ 配置同步用户
+mysql -u root -p #登录root用户 mysql&amp;gt;GRANT REPLICATION SLAVE ON *.* to &#39;baker&#39;@&#39;192.168.137.250&#39; identified by &#39;123456&#39;; mysql&amp;gt;flush privileges;  然后查看一下主服务器当前二进制日志名和偏移量，也就是同步的起始点
+mysql&amp;gt; show master status; +------------------+----------+--------------------------------------------------------------------+------------------+ | File | Position | Binlog_Do_DB | Binlog_Ignore_DB | +------------------+----------+--------------------------------------------------------------------+------------------+ | mysql-bin.</description>
+    </item>
+    
+  </channel>
+</rss>
