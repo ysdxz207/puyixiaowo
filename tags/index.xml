@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 飞鸿</title>
+    <link>//puyixiaowo.win/tags/</link>
+    <description>Recent content in Tags on 飞鸿</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Wed, 04 Nov 2015 17:12:34 +0800</lastBuildDate>
+    
+	<atom:link href="//puyixiaowo.win/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data</title>
+      <link>//puyixiaowo.win/tags/data/</link>
+      <pubDate>Wed, 04 Nov 2015 17:12:34 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>//puyixiaowo.win/tags/debian/</link>
+      <pubDate>Fri, 19 May 2017 10:23:54 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dubbo</title>
+      <link>//puyixiaowo.win/tags/dubbo/</link>
+      <pubDate>Tue, 21 Feb 2017 11:11:26 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/dubbo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gae</title>
+      <link>//puyixiaowo.win/tags/gae/</link>
+      <pubDate>Mon, 08 May 2017 15:38:22 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/gae/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>//puyixiaowo.win/tags/git/</link>
+      <pubDate>Mon, 08 May 2017 15:38:22 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>//puyixiaowo.win/tags/hugo/</link>
+      <pubDate>Sat, 15 Apr 2017 11:55:48 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jquery</title>
+      <link>//puyixiaowo.win/tags/jquery/</link>
+      <pubDate>Wed, 04 Nov 2015 17:12:34 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mybatis</title>
+      <link>//puyixiaowo.win/tags/mybatis/</link>
+      <pubDate>Wed, 26 Apr 2017 14:06:59 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>//puyixiaowo.win/tags/mysql/</link>
+      <pubDate>Fri, 23 Oct 2015 11:43:30 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sum</title>
+      <link>//puyixiaowo.win/tags/sum/</link>
+      <pubDate>Fri, 23 Oct 2015 11:43:30 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/sum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>一对多</title>
+      <link>//puyixiaowo.win/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A/</link>
+      <pubDate>Fri, 23 Oct 2015 11:43:30 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>//puyixiaowo.win/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 15 Apr 2017 11:55:48 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>延迟加载</title>
+      <link>//puyixiaowo.win/tags/%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD/</link>
+      <pubDate>Tue, 21 Feb 2017 11:11:26 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>重复</title>
+      <link>//puyixiaowo.win/tags/%E9%87%8D%E5%A4%8D/</link>
+      <pubDate>Fri, 23 Oct 2015 11:43:30 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/%E9%87%8D%E5%A4%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随机查询</title>
+      <link>//puyixiaowo.win/tags/%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Tue, 25 Apr 2017 14:33:35 +0800</pubDate>
+      
+      <guid>//puyixiaowo.win/tags/%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
