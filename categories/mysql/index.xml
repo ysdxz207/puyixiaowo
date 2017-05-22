@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on 飞鸿</title>
+    <link>http://puyixiaowo.win/categories/mysql/</link>
+    <description>Recent content in Mysql on 飞鸿</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Fri, 19 May 2017 17:22:37 +0800</lastBuildDate>
+    
+	<atom:link href="http://puyixiaowo.win/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysql主从复制配置</title>
+      <link>http://puyixiaowo.win/post/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 19 May 2017 17:22:37 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/post/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>1.两台机配置： `192.168.137.46`//主库地址 `192.168.137.250`//从库地址 主库中有4张表： ``` db_tnews_dictionary db_tnews_member db_tnews_news db_tnews_manager ``` 从库与主库相同  2.主库配置：  修改配置文件
+/etc/mysql/my.cnf
+[mysqld] server-id = 1 #主库的服务器ID log_bin = /var/log/mysql/mysql-bin.log #这里需要开启bin log binlog_do_db = db_tnews_news #需要同步的库 binlog_do_db = db_tnews_dictionary #需要同步的库 binlog_do_db = db_tnews_member #需要同步的库 binlog_do_db = db_tnews_manager #需要同步的库 #binlog_ignore_db = include_database_name #忽略的库  重启mysql服务
+service mysql restart &amp;gt; 这里因为我用的是mysql-server-5.5的所以是服务名是mysql
+ 配置同步用户
+mysql -u root -p #登录root用户 mysql&amp;gt;GRANT REPLICATION SLAVE ON *.* to &#39;baker&#39;@&#39;192.168.137.250&#39; identified by &#39;123456&#39;; mysql&amp;gt;flush privileges;  然后查看一下主服务器当前二进制日志名和偏移量，也就是同步的起始点</description>
+    </item>
+    
+    <item>
+      <title>mysql 随机查询n条</title>
+      <link>http://puyixiaowo.win/post/mysql-%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2n%E6%9D%A1/</link>
+      <pubDate>Tue, 25 Apr 2017 14:33:35 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/post/mysql-%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2n%E6%9D%A1/</guid>
+      <description>DROP TABLE IF EXISTS test_random; CREATE TABLE `test_random` ( `id` int(11) NOT NULL AUTO_INCREMENT, `create_time` datetime DEFAULT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; DROP FUNCTION IF EXISTS test_random_func; CREATE FUNCTION test_random_func(num INT) RETURNS INT BEGIN DECLARE n INT UNSIGNED DEFAULT 0; WHILE n &amp;lt; num DO INSERT INTO test_random(`create_time`) VALUES(NOW()); SET n=n+1; END WHILE; RETURN n; END; SELECT test_random_func(200000) AS &#39;数据条数&#39;; EXPLAIN SELECT id AS &#39;RAND()查询结果&#39; FROM test_random ORDER BY RAND() limit 0, 10; SELECT t.</description>
+    </item>
+    
+    <item>
+      <title>mysql使用left join（一对多）后重复导致sum重复相加问题解决</title>
+      <link>http://puyixiaowo.win/post/mysql%E4%BD%BF%E7%94%A8left-join%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%90%8E%E9%87%8D%E5%A4%8D%E5%AF%BC%E8%87%B4sum%E9%87%8D%E5%A4%8D%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Fri, 23 Oct 2015 11:43:30 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/post/mysql%E4%BD%BF%E7%94%A8left-join%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%90%8E%E9%87%8D%E5%A4%8D%E5%AF%BC%E8%87%B4sum%E9%87%8D%E5%A4%8D%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <description>http://stackoverflow.com/questions/2436284/mysql-sum-for-distinct-rows
+示例：
+sum后总和 = 每一组的和*重复次数 =&amp;gt;每一组的sum和 = sum后总和 / 重复次数 重复次数= 查询总条数 / 每一组的条数 而每一组的sum和是我们所要的结果 所以 每一组的sum和 = sum后总和 * 每一组的条数 / 查询总条数  </description>
+    </item>
+    
+  </channel>
+</rss>
