@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 飞鸿</title>
+    <link>http://puyixiaowo.win/categories/</link>
+    <description>Recent content in Categories on 飞鸿</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
+    
+	<atom:link href="http://puyixiaowo.win/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jetbrains Idea</title>
+      <link>http://puyixiaowo.win/categories/jetbrains-idea/</link>
+      <pubDate>Mon, 06 Mar 2017 16:24:52 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/categories/jetbrains-idea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mybatis</title>
+      <link>http://puyixiaowo.win/categories/mybatis/</link>
+      <pubDate>Wed, 26 Apr 2017 14:06:59 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/categories/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>http://puyixiaowo.win/categories/mysql/</link>
+      <pubDate>Fri, 19 May 2017 17:22:37 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端</title>
+      <link>http://puyixiaowo.win/categories/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Sat, 15 Apr 2017 11:55:48 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/categories/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>http://puyixiaowo.win/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Fri, 19 May 2017 10:23:54 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>版本管理</title>
+      <link>http://puyixiaowo.win/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 08 May 2017 15:38:22 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

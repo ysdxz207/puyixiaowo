@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mybatis on 飞鸿</title>
+    <link>http://puyixiaowo.win/tags/mybatis/</link>
+    <description>Recent content in Mybatis on 飞鸿</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Wed, 26 Apr 2017 14:06:59 +0800</lastBuildDate>
+    
+	<atom:link href="http://puyixiaowo.win/tags/mybatis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mybatis-generator配置说明</title>
+      <link>http://puyixiaowo.win/post/mybatis-generator%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Wed, 26 Apr 2017 14:06:59 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/post/mybatis-generator%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</guid>
+      <description>mybatis generator config
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE generatorConfiguration PUBLIC &amp;quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&amp;quot; &amp;quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&amp;quot;&amp;gt; &amp;lt;!-- 根节点&amp;lt;generatorConfiguration&amp;gt; :节点没有任何属性，直接写节点即可，如下： --&amp;gt; &amp;lt;generatorConfiguration&amp;gt; &amp;lt;!-- &amp;lt;properties&amp;gt; 引入外部文件 使用${property}调用 --&amp;gt; &amp;lt;!-- &amp;lt;properties resource=&amp;quot;jdbc.properties&amp;quot;/&amp;gt; --&amp;gt; &amp;lt;!-- resource：指定**classpath**下的属性文件，使用类似com/myproject/generatorConfig.properties这样的属性值。 --&amp;gt; &amp;lt;!-- url：可以指定文件系统上的特定位置，例如file:///C:/myfolder/generatorConfig.properties --&amp;gt; &amp;lt;!-- &amp;lt;context&amp;gt;元素用于指定生成一组对象的环境。例如指定要连接的数据库，要生成对象的类型和要处理的数据库中的表。运行MBG的时候还可以指定要运行的&amp;lt;context&amp;gt;。 --&amp;gt; &amp;lt;!-- id:必选属性，该id属性可以在运行时的使用。 defaultModelType:这个属性定义了MBG如何生成*实体类*。 conditional:*这是默认值*,这个模型和下面的hierarchical类似，除了如果那个单独的类将只包含一个字段，将不会生成一个单独的类。 因此,如果一个表的主键只有一个字段,那么不会为该字段生成单独的实体类,会将该字段合并到基本实体类中。 flat:该模型为每一张表只生成一个实体类。这个实体类包含表中的所有字段。*这种模型最简单，推荐使用。* hierarchical:如果表有主键,那么该模型会产生一个单独的主键实体类,如果表还有BLOB字段， 则会为表生成一个包含所有BLOB字段的单独的实体类,然后为所有其他的字段生成一个单独的实体类。 MBG会在所有生成的实体类之间维护一个继承关系。 targetRuntime:此属性用于指定生成的代码的运行时环境。该属性支持以下可选值： MyBatis3:*这是默认值* MyBatis3Simple Ibatis2Java2 Ibatis2Java5 一般情况下使用默认值即可，有关这些值的具体作用以及区别请查看中文文档的详细内容。 introspectedColumnImpl:该参数可以指定扩展org.mybatis.generator.api.IntrospectedColumn该类的实现类。该属性的作用可以查看扩展MyBatis Generator。 --&amp;gt; &amp;lt;context id=&amp;quot;testTables&amp;quot; targetRuntime=&amp;quot;MyBatis3&amp;quot;&amp;gt; &amp;lt;!-- &amp;lt;property name=&amp;quot;&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt; autoDelimitKeywords :当表名或者字段名为SQL关键字的时候，可以设置该属性为true，MBG会自动给表名或字段名添加分隔符。 beginningDelimiter ：由于beginningDelimiter和endingDelimiter的默认值为双引号(&amp;quot;)，在Mysql中不能这么写，所以还要将这两个默认值改为**反单引号(`)**， endingDelimiter ：&amp;lt;property name=&amp;quot;beginningDelimiter&amp;quot; value=&amp;quot;`&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;endingDelimiter&amp;quot; value=&amp;quot;`&amp;quot;/&amp;gt; javaFileEncoding ：属性javaFileEncoding设置要使用的Java文件的编码，默认使用当前平台的编码，只有当生产的编码需要特殊指定时才需要使用，一般用不到。 javaFormatter ：最后两个javaFormatter和xmlFormatter属性**可能会**很有用，如果你想使用模板来定制生成的java文件和xml文件的样式，你可以通过指定这两个属性的值来实现。 xmlFormatter ：最后两个javaFormatter和xmlFormatter属性**可能会**很有用，如果你想使用模板来定制生成的java文件和xml文件的样式，你可以通过指定这两个属性的值来实现。 --&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>mybatis延迟加载导致dubbo值为null解决办法</title>
+      <link>http://puyixiaowo.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Tue, 21 Feb 2017 11:11:26 +0800</pubDate>
+      
+      <guid>http://puyixiaowo.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>场景条件：
+1、bean里有两个属性：
+private String subjectCategoryName;//分类名 private String className;//班级分类名称  2、使用mybatis嵌套查询：
+&amp;lt;association property=&amp;quot;className&amp;quot; fetchType=&amp;quot;eager&amp;quot; javaType=&amp;quot;java.lang.String&amp;quot; column=&amp;quot;{id=class_id}&amp;quot; select=&amp;quot;selectClassName&amp;quot; /&amp;gt; &amp;lt;association property=&amp;quot;subjectCategoryName&amp;quot; fetchType=&amp;quot;eager&amp;quot; javaType=&amp;quot;java.lang.String&amp;quot; column=&amp;quot;{id=subject_category}&amp;quot; select=&amp;quot;selectCategoryName&amp;quot; /&amp;gt;  3、查询报错：
+Caused by: com.alibaba.com.caucho.hessian.io.HessianProtocolException: com.alibaba.com.caucho.hessian.io.ObjectDeserializer: unexpected object java.lang.String (id) at com.alibaba.com.caucho.hessian.io.AbstractDeserializer.error(AbstractDeserializer.java:108) at com.alibaba.com.caucho.hessian.io.AbstractDeserializer.readMap(AbstractDeserializer.java:95) at com.alibaba.com.caucho.hessian.io.Hessian2Input.readObject(Hessian2Input.java:1550) at com.alibaba.com.caucho.hessian.io.JavaDeserializer$ObjectFieldDeserializer.deserialize(JavaDeserializer.java:396) ... 47 more  4、debug发现service里有值，但无法进入action
+5、google 搜索mybatis association dubbo找到https://github.com/alibaba/dubbo/issues/156
+于是明白了原因，将mybatis设置中改为false，发现确实没报错了，也有数据了，于是把mybatis 设置改回true，然后更改如下代码
+&amp;lt;association property=&amp;quot;subjectCategoryName&amp;quot; fetchType=&amp;quot;eager&amp;quot; javaType=&amp;quot;java.lang.String&amp;quot; column=&amp;quot;{id=subject_category}&amp;quot; select=&amp;quot;selectCategoryName&amp;quot; /&amp;gt; &amp;lt;association property=&amp;quot;className&amp;quot; fetchType=&amp;quot;eager&amp;quot; javaType=&amp;quot;java.lang.String&amp;quot; column=&amp;quot;{id=class_id}&amp;quot; select=&amp;quot;selectClassName&amp;quot;  增加了fetchType=&amp;ldquo;eager&amp;rdquo;问题解决</description>
+    </item>
+    
+  </channel>
+</rss>
