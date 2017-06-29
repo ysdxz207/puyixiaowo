@@ -4,8 +4,8 @@
 <meta name="baidu-site-verification" content="1aycDzfbvq" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="飞鸿, cleverlee">
-<meta content="mysql主从复制配置 - 飞鸿" property="og:title">
-<title>mysql主从复制配置 | 飞鸿</title>
+<meta content="centos下安装redis - 飞鸿" property="og:title">
+<title>centos下安装redis | 飞鸿</title>
 <link rel="shortcut icon" href="http://puyixiaowo.win/images/favicon.ico">
 <link rel="stylesheet" href="http://puyixiaowo.win/css/style.css">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -43,146 +43,114 @@
         <div class="tile is-ancestor">
             <div class="tile is-parent is-vertical is-9 search_content">
     <article class="tile is-child">
-        <h1 class="title">mysql主从复制配置</h1>
-        <h2 class="subtitle is-6">2017-05-19 17:22:37</h2>
+        <h1 class="title">centos下安装redis</h1>
+        <h2 class="subtitle is-6">2017-06-29 14:53:42</h2>
         
         <div class="tags">
     
-        <a class="tag is-primary" href="/tags/%E4%B8%BB%E4%BB%8E">主从</a>
+        <a class="tag is-primary" href="/tags/linux">linux</a>
     
 </div>
 
         
         <div class="content">
-            
+            <p>1.到<a href="http://download.redis.io/releases/">http://download.redis.io/releases/</a>下找到需要的版本
+2.</p>
 
-<h4 id="1-两台机配置">1.两台机配置：</h4>
-
-<pre><code>`192.168.137.46`//主库地址
-`192.168.137.250`//从库地址
-
-主库中有4张表：
-```
-db_tnews_dictionary
-db_tnews_member
-db_tnews_news
-db_tnews_manager
-```
-从库与主库相同
+<pre><code>wget http://download.redis.io/releases/redis-3.2.9.tar.gz
+tar -zxf http://download.redis.io/releases/redis-3.2.9.tar.gz
+cd redis-3.2.9.tar.gz
+make
+make install
+cp redis.conf /etc
 </code></pre>
 
-<h4 id="2-主库配置">2.主库配置：</h4>
+<p>3.用户及日志</p>
 
-<ul>
-<li><p>修改配置文件</p>
-
-<p><code>/etc/mysql/my.cnf</code></p>
-
-<pre><code>[mysqld]
-server-id       = 1 #主库的服务器ID
-log_bin         = /var/log/mysql/mysql-bin.log #这里需要开启bin log
-binlog_do_db        = db_tnews_news  #需要同步的库
-binlog_do_db        = db_tnews_dictionary #需要同步的库
-binlog_do_db        = db_tnews_member #需要同步的库
-binlog_do_db        = db_tnews_manager #需要同步的库
-#binlog_ignore_db   = include_database_name #忽略的库
-</code></pre></li>
-
-<li><p>重启mysql服务</p>
-
-<p><code>service mysql restart</code>
-&gt; 这里因为我用的是mysql-server-5.5的所以是服务名是mysql</p></li>
-
-<li><p>配置同步用户</p>
-
-<pre><code>mysql -u root -p #登录root用户
-mysql&gt;GRANT REPLICATION SLAVE ON *.* to 'baker'@'192.168.137.250' identified by '123456';
-mysql&gt;flush privileges;
-</code></pre></li>
-
-<li><p>然后查看一下主服务器当前二进制日志名和偏移量，也就是同步的起始点</p>
-
-<pre><code>mysql&gt; show master status;
-+------------------+----------+--------------------------------------------------------------------+------------------+
-| File             | Position | Binlog_Do_DB                                                       | Binlog_Ignore_DB |
-+------------------+----------+--------------------------------------------------------------------+------------------+
-| mysql-bin.000004 |      107 | db_tnews_news,db_tnews_dictionary,db_tnews_member,db_tnews_manager |                  |
-+------------------+----------+--------------------------------------------------------------------+------------------+
-1 row in set (0.00 sec)
-
-</code></pre></li>
-</ul>
-
-<h4 id="3-从库配置">3.从库配置</h4>
-
-<ul>
-<li><p>修改配置文件</p>
-
-<p><code>/etc/mysql/my.cnf</code></p>
-
-<pre><code>server-id       = 2
-    
-</code></pre></li>
-
-<li><p>重启mysql服务</p>
-
-<p><code>service mysql restart</code></p></li>
-
-<li><p>配置从库中的主库地址</p>
-
-<pre><code>mysql -u root -p #root登录从库
-mysql&gt;STOP SLAVE;
-mysql&gt; CHANGE MASTER TO MASTER_HOST='192.168.137.46',
-MASTER_PORT=3306,
-MASTER_USER='baker',
-MASTER_PASSWORD='123456',
-MASTER_LOG_FILE='mysql-bin.000004',
-MASTER_LOG_POS=107;
-mysql&gt;START SLAVE;
-</code></pre></li>
-</ul>
-
-<blockquote>
-<p>MASTER_LOG_FILE是之前show master status;查询到的File值
-MASTER_LOG_POS是之前show master status;查询到的Position值</p>
-</blockquote>
-
-<ul>
-<li><p>查看从库进程</p>
-
-<p><code>mysql&gt; show slave status\G;</code></p>
-
-<p>Slave_IO_Running: Yes
-Slave_SQL_Running: Yes
-两项是否都在运行
-以及Slave_IO_State的值(运行状态):Waiting for master to send event
-证明已配置完成</p></li>
-</ul>
-
-<h4 id="4-测试">4.测试</h4>
-
-<pre><code>主库：
-```
-CREATE TABLE `test` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-);
-```
-从库：
-`show slave status\G;`
+<pre><code>sudo useradd redis  
+sudo mkdir -p /var/lib/redis  
+sudo mkdir -p /var/log/redis  
+sudo chown redis.redis /var/lib/redis ＃db文件放在这里，要修改redis.conf  
+sudo chown redis.redis /var/log/redis
 </code></pre>
 
 <blockquote>
-<p>Last_IO_Errno: 0</p>
+<p>需要密码认证则修改redis.conf中requirepass密码
+需要修改redis.conf,将 daemonize no 改为 daemonize yes才能后台运行redis
+4.启动脚本</p>
 
-<p>Last_IO_Error:</p>
+<pre><code>vim /etc/init.d/redis
+</code></pre>
 
-<p>Last_SQL_Errno: 0</p>
+<p>代码如下，粘贴进去</p>
 
-<p>Last_SQL_Error:</p>
-
-<p>没有报错，查看从库test表被创建</p>
+<pre><code>###########################  
+PATH=/usr/local/bin:/sbin:/usr/bin:/bin  
+     
+REDISPORT=6379  
+EXEC=/usr/local/bin/redis-server  
+REDIS_CLI=/usr/local/bin/redis-cli  
+     
+PIDFILE=/var/run/redis.pid  
+CONF=&quot;/etc/redis.conf&quot;  
+     
+case &quot;$1&quot; in  
+    start)  
+        if [ -f $PIDFILE ]  
+        then  
+                echo &quot;$PIDFILE exists, process is already running or crashed&quot;  
+        else  
+                echo &quot;Starting Redis server...&quot;  
+                $EXEC $CONF  
+        fi  
+        if [ &quot;$?&quot;=&quot;0&quot; ]   
+        then  
+              echo &quot;Redis is running...&quot;  
+        fi  
+        ;;  
+    stop)  
+        if [ ! -f $PIDFILE ]  
+        then  
+                echo &quot;$PIDFILE does not exist, process is not running&quot;  
+        else  
+                PID=$(cat $PIDFILE)  
+                echo &quot;Stopping ...&quot;  
+                $REDIS_CLI -p $REDISPORT SHUTDOWN  
+                while [ -x ${PIDFILE} ]  
+               do  
+                    echo &quot;Waiting for Redis to shutdown ...&quot;  
+                    sleep 1  
+                done  
+                echo &quot;Redis stopped&quot;  
+        fi  
+        ;;  
+   restart|force-reload)  
+        ${0} stop  
+        ${0} start  
+        ;;  
+  *)  
+    echo &quot;Usage: /etc/init.d/redis {start|stop|restart|force-reload}&quot; &gt;&amp;2  
+        exit 1  
+esac  
+##############################  
+</code></pre>
 </blockquote>
+
+<p>执行权限<code>chmod +x /etc/init.d/redis</code>
+开机启动<code>sudo chkconfig redis on</code></p>
+
+<p>5.redis启动和停止</p>
+
+<pre><code>service redis start   #或者 /etc/init.d/redis start  
+service redis stop   #或者 /etc/init.d/redis stop  
+</code></pre>
+
+<p>6.测试</p>
+
+<pre><code>redis-cli
+auth 123456
+........
+</code></pre>
 
         </div>
     </article>

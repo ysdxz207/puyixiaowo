@@ -7,19 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
-    <lastBuildDate>Tue, 23 May 2017 15:00:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jun 2017 14:53:42 +0800</lastBuildDate>
     
 	<atom:link href="http://puyixiaowo.win/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>idea静态项目不能设置node_modules为资源目录解决</title>
-      <link>http://puyixiaowo.win/post/idea%E9%9D%99%E6%80%81%E9%A1%B9%E7%9B%AE%E4%B8%8D%E8%83%BD%E8%AE%BE%E7%BD%AEnode_modules%E4%B8%BA%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E8%A7%A3%E5%86%B3/</link>
-      <pubDate>Tue, 23 May 2017 15:00:18 +0800</pubDate>
+      <title>centos下安装redis</title>
+      <link>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</link>
+      <pubDate>Thu, 29 Jun 2017 14:53:42 +0800</pubDate>
       
-      <guid>http://puyixiaowo.win/post/idea%E9%9D%99%E6%80%81%E9%A1%B9%E7%9B%AE%E4%B8%8D%E8%83%BD%E8%AE%BE%E7%BD%AEnode_modules%E4%B8%BA%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E8%A7%A3%E5%86%B3/</guid>
-      <description> 如图所示，没有resource设置 解决办法：将项目根目录下的项目名.iml文件移动到.idea目录即可
- </description>
+      <guid>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</guid>
+      <description>1.到http://download.redis.io/releases/下找到需要的版本 2.
+wget http://download.redis.io/releases/redis-3.2.9.tar.gz tar -zxf http://download.redis.io/releases/redis-3.2.9.tar.gz cd redis-3.2.9.tar.gz make make install cp redis.conf /etc  3.用户及日志
+sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis ＃db文件放在这里，要修改redis.conf sudo chown redis.redis /var/log/redis   需要密码认证则修改redis.conf中requirepass密码 需要修改redis.conf,将 daemonize no 改为 daemonize yes才能后台运行redis 4.启动脚本
+vim /etc/init.d/redis  代码如下，粘贴进去
+########################### PATH=/usr/local/bin:/sbin:/usr/bin:/bin REDISPORT=6379 EXEC=/usr/local/bin/redis-server REDIS_CLI=/usr/local/bin/redis-cli PIDFILE=/var/run/redis.pid CONF=&amp;quot;/etc/redis.conf&amp;quot; case &amp;quot;$1&amp;quot; in start) if [ -f $PIDFILE ] then echo &amp;quot;$PIDFILE exists, process is already running or crashed&amp;quot; else echo &amp;quot;Starting Redis server.</description>
     </item>
     
     <item>
