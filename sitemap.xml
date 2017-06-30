@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85mysql/</loc>
+    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</loc>
     <lastmod>2017-06-29T14:53:42+08:00</lastmod>
   </url>
@@ -68,7 +73,7 @@
   
   <url>
     <loc>http://puyixiaowo.win/tags/</loc>
-    <lastmod>2017-06-29T14:53:42+08:00</lastmod>
+    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +132,7 @@
   
   <url>
     <loc>http://puyixiaowo.win/categories/linux/</loc>
-    <lastmod>2017-06-29T14:53:42+08:00</lastmod>
+    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,7 +162,7 @@
   
   <url>
     <loc>http://puyixiaowo.win/post/</loc>
-    <lastmod>2017-06-29T14:53:42+08:00</lastmod>
+    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,7 +180,7 @@
   
   <url>
     <loc>http://puyixiaowo.win/tags/</loc>
-    <lastmod>2017-06-29T14:53:42+08:00</lastmod>
+    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -235,7 +240,7 @@
   
   <url>
     <loc>http://puyixiaowo.win/</loc>
-    <lastmod>2017-06-29T14:53:42+08:00</lastmod>
+    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   

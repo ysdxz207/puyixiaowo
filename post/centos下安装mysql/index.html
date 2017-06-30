@@ -4,8 +4,8 @@
 <meta name="baidu-site-verification" content="1aycDzfbvq" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="飞鸿, cleverlee">
-<meta content="一对多 - 飞鸿" property="og:title">
-<title>一对多 | 飞鸿</title>
+<meta content="centos下安装mysql - 飞鸿" property="og:title">
+<title>centos下安装mysql | 飞鸿</title>
 <link rel="shortcut icon" href="http://puyixiaowo.win/images/favicon.ico">
 <link rel="stylesheet" href="http://puyixiaowo.win/css/style.css">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -38,67 +38,44 @@
         </div>
     </nav>
 </div>
-
 <section class="section">
     <div class="container">
         <div class="tile is-ancestor">
             <div class="tile is-parent is-vertical is-9 search_content">
-    <div class="tile is-child">
+    <article class="tile is-child">
+        <h1 class="title">centos下安装mysql</h1>
+        <h2 class="subtitle is-6">2017-06-29 21:46:29</h2>
         
-        
-        <article class="box">
-            <h1 class="title"><a href="http://puyixiaowo.win/post/mysql%E4%BD%BF%E7%94%A8left-join%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%90%8E%E9%87%8D%E5%A4%8D%E5%AF%BC%E8%87%B4sum%E9%87%8D%E5%A4%8D%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">mysql使用left join（一对多）后重复导致sum重复相加问题解决</a></h1>
-            <h2 class="subtitle is-6">2015-10-23</h2>
-            
-            <div class="tags">
+        <div class="tags">
     
-        <a class="tag is-primary" href="/tags/mysql">mysql</a>
-    
-        <a class="tag is-primary" href="/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A">一对多</a>
-    
-        <a class="tag is-primary" href="/tags/sum">sum</a>
-    
-        <a class="tag is-primary" href="/tags/%E9%87%8D%E5%A4%8D">重复</a>
+        <a class="tag is-primary" href="/tags/"></a>
     
 </div>
 
-            
-            <div class="content">
-                
-                
-                http://stackoverflow.com/questions/2436284/mysql-sum-for-distinct-rows
-示例：
-sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总和 / 重复次数 重复次数= 查询总条数 / 每一组的条数 而每一组的sum和是我们所要的结果 所以 每一组的sum和 = sum后总和 * 每一组的条数 / 查询总条...
-                
-            </div>
-        </article>
         
-    </div>
-    <div class="tile is-child">
-        <nav class="pagination level is-mobile">
-    <div class="level-left">
-        <div class="level-item">
-            
-            <button class="pagination-previous button is-disabled" disabled>
-                <i class="fa fa-angle-double-left"></i>&nbsp;上一页
-            </button>
-            
-        </div>
-    </div>
-    <div class="level-right is-marginless">
-        <div class="level-item">
-            
-            <button class="pagination-previous button is-disabled" disabled>
-                下一页&nbsp;<i class="fa fa-angle-double-right"></i>
-            </button>
-            
-        </div>
-    </div>
-</nav>
+        <div class="content">
+            <pre><code>wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
 
-    </div>
+</code></pre>
+
+<p>默认安装的是　mysql5.6的，如果要安装　mysql 5.5 或mysql 5.7 需要修改　/etc/yum.repos.d/mysql-community.repo 里把　5.5或5.7开启　把　5.6禁用
+然后安装
+<code>yum install mysql-community-server</code>
+成功安装之后重启mysql服务
+<code>service mysqld restart</code></p>
+
+<p>设置密码
+<code>set password for 'root'@'localhost' = password('mypasswd');</code>
+远程访问</p>
+
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mypasswd' WITH GRANT OPTION;
+flush privileges;
+</code></pre>
+
+        </div>
+    </article>
 </div>
-
             <div class="tile is-vertical is-parent is-hidden-mobile">
     <div class="field has-addons">
     <p class="control has-icon is-fullwidth">
@@ -395,6 +372,24 @@ sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总�
         </div>
     </div>
 </section>
+
+
+<section class="section">
+  <div class="container">
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    <script>
+        var cloudTieConfig = {
+            url: document.location.href,
+            sourceId: "",
+            productKey: "91de48feb65e4ce8895cb5f5f63d18dd",
+            target: "cloud-tie-wrapper"
+        };
+    </script>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  </div>
+</section>
+
+
 <footer class="footer">
     <div class="container has-text-centered">
         <p>&copy; <a href="//github.com/ysdxz207" target="_blank">ysdxz207</a> 2017</p>
@@ -466,3 +461,4 @@ sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总�
         s.parentNode.insertBefore(bp, s);
     })();
 </script>
+

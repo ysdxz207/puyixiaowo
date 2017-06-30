@@ -47,6 +47,32 @@
         
         
         <article class="box">
+            <h1 class="title"><a href="http://puyixiaowo.win/post/mysql-%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2n%E6%9D%A1/">mysql 随机查询n条</a></h1>
+            <h2 class="subtitle is-6">2017-04-25</h2>
+            
+            <div class="tags">
+    
+        <a class="tag is-primary" href="/tags/%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2">随机查询</a>
+    
+</div>
+
+            
+            <div class="content">
+                
+                
+                DROP TABLE IF EXISTS test_random; CREATE TABLE `test_random` ( `id` int(11) NOT NULL AUTO_INCREMENT, `create_time` datetime DEFAULT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; DROP...
+                
+                    <a class="button read-more" href="http://puyixiaowo.win/post/mysql-%E9%9A%8F%E6%9C%BA%E6%9F%A5%E8%AF%A2n%E6%9D%A1/" style="height:28px">
+                        查看更多
+                        <span class="icon is-small">
+                            <i class="fa fa-angle-double-right"></i>
+                        </span>
+                    </a>
+                
+            </div>
+        </article>
+        
+        <article class="box">
             <h1 class="title"><a href="http://puyixiaowo.win/post/%E5%88%A9%E7%94%A8github-pages%E5%92%8Chugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">利用github pages和hugo搭建个人博客</a></h1>
             <h2 class="subtitle is-6">2017-04-15</h2>
             
@@ -155,33 +181,6 @@ private String subjectCategoryName;//分类名 private String className;//班级
             </div>
         </article>
         
-        <article class="box">
-            <h1 class="title"><a href="http://puyixiaowo.win/post/mysql%E4%BD%BF%E7%94%A8left-join%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%90%8E%E9%87%8D%E5%A4%8D%E5%AF%BC%E8%87%B4sum%E9%87%8D%E5%A4%8D%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">mysql使用left join（一对多）后重复导致sum重复相加问题解决</a></h1>
-            <h2 class="subtitle is-6">2015-10-23</h2>
-            
-            <div class="tags">
-    
-        <a class="tag is-primary" href="/tags/mysql">mysql</a>
-    
-        <a class="tag is-primary" href="/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A">一对多</a>
-    
-        <a class="tag is-primary" href="/tags/sum">sum</a>
-    
-        <a class="tag is-primary" href="/tags/%E9%87%8D%E5%A4%8D">重复</a>
-    
-</div>
-
-            
-            <div class="content">
-                
-                
-                http://stackoverflow.com/questions/2436284/mysql-sum-for-distinct-rows
-示例：
-sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总和 / 重复次数 重复次数= 查询总条数 / 每一组的条数 而每一组的sum和是我们所要的结果 所以 每一组的sum和 = sum后总和 * 每一组的条数 / 查询总条...
-                
-            </div>
-        </article>
-        
     </div>
     <div class="tile is-child">
         <nav class="pagination level is-mobile">
@@ -197,9 +196,9 @@ sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总�
     <div class="level-right is-marginless">
         <div class="level-item">
             
-            <button class="pagination-previous button is-disabled" disabled>
+            <a class="pagination-previous button is-primary" href="/page/3/">
                 下一页&nbsp;<i class="fa fa-angle-double-right"></i>
-            </button>
+            </a>
             
         </div>
     </div>
@@ -475,6 +474,8 @@ sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总�
         </p>
         
         
+        <a class="panel-block" href="/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85mysql/" title="centos下安装mysql">centos下安装mysql</a>
+        
         <a class="panel-block" href="/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/" title="centos下安装redis">centos下安装redis</a>
         
         <a class="panel-block" href="/post/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE/" title="mysql主从复制配置">mysql主从复制配置</a>
@@ -492,8 +493,6 @@ sum后总和 = 每一组的和*重复次数 =&gt;每一组的sum和 = sum后总�
         <a class="panel-block" href="/post/%E5%88%A0%E9%99%A4%E6%B3%A8%E9%87%8A%E7%A9%BA%E8%A1%8C%E6%AD%A3%E5%88%99/" title="删除注释空行正则">删除注释空行正则</a>
         
         <a class="panel-block" href="/post/idea-live-template/" title="idea live template">idea live template</a>
-        
-        <a class="panel-block" href="/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" title="mybatis延迟加载导致dubbo值为null解决办法">mybatis延迟加载导致dubbo值为null解决办法</a>
         
     </nav>
 </div>
