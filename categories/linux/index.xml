@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on 飞鸿</title>
-    <link>http://puyixiaowo.win/categories/linux/</link>
+    <link>http://hupubao.win/categories/linux/</link>
     <description>Recent content in Linux on 飞鸿</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
     <lastBuildDate>Thu, 29 Jun 2017 21:46:29 +0800</lastBuildDate>
     
-	<atom:link href="http://puyixiaowo.win/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://hupubao.win/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>centos下安装mysql</title>
-      <link>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85mysql/</link>
+      <link>http://hupubao.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85mysql/</link>
       <pubDate>Thu, 29 Jun 2017 21:46:29 +0800</pubDate>
       
-      <guid>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85mysql/</guid>
+      <guid>http://hupubao.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85mysql/</guid>
       <description>wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm rpm -ivh mysql-community-release-el7-5.noarch.rpm  默认安装的是　mysql5.6的，如果要安装　mysql 5.5 或mysql 5.7 需要修改　/etc/yum.repos.d/mysql-community.repo 里把　5.5或5.7开启　把　5.6禁用 然后安装 yum install mysql-community-server 成功安装之后重启mysql服务 service mysqld restart
 设置密码 set password for &#39;root&#39;@&#39;localhost&#39; = password(&#39;mypasswd&#39;); 远程访问
 GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;mypasswd&#39; WITH GRANT OPTION; flush privileges;  </description>
@@ -25,10 +25,10 @@ GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;myp
     
     <item>
       <title>centos下安装redis</title>
-      <link>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</link>
+      <link>http://hupubao.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</link>
       <pubDate>Thu, 29 Jun 2017 14:53:42 +0800</pubDate>
       
-      <guid>http://puyixiaowo.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</guid>
+      <guid>http://hupubao.win/post/centos%E4%B8%8B%E5%AE%89%E8%A3%85redis/</guid>
       <description>1.到http://download.redis.io/releases/下找到需要的版本 2.
 wget http://download.redis.io/releases/redis-3.2.9.tar.gz tar -zxf http://download.redis.io/releases/redis-3.2.9.tar.gz cd redis-3.2.9.tar.gz make make install cp redis.conf /etc  3.用户及日志
 sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis ＃db文件放在这里，要修改redis.conf sudo chown redis.redis /var/log/redis   需要密码认证则修改redis.conf中requirepass密码 需要修改redis.conf,将 daemonize no 改为 daemonize yes才能后台运行redis 4.启动脚本

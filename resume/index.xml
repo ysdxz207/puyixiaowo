@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resumes on 飞鸿</title>
-    <link>http://puyixiaowo.win/resume/</link>
+    <link>http://hupubao.win/resume/</link>
     <description>Recent content in Resumes on 飞鸿</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
     <lastBuildDate>Wed, 19 Apr 2017 15:40:27 +0800</lastBuildDate>
     
-	<atom:link href="http://puyixiaowo.win/resume/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://hupubao.win/resume/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我的简历</title>
-      <link>http://puyixiaowo.win/resume/my-resume/</link>
+      <link>http://hupubao.win/resume/my-resume/</link>
       <pubDate>Wed, 19 Apr 2017 15:40:27 +0800</pubDate>
       
-      <guid>http://puyixiaowo.win/resume/my-resume/</guid>
+      <guid>http://hupubao.win/resume/my-resume/</guid>
       <description> 基本资料  java开发 2013年毕业，本科
    个人作品 tnews - dubbo分布式新闻服务器以及后台管理系统，数据来源于易源
 quickrun - java写的快速启动小程序

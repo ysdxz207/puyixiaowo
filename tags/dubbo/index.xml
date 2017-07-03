@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dubbo on 飞鸿</title>
-    <link>http://puyixiaowo.win/tags/dubbo/</link>
+    <link>http://hupubao.win/tags/dubbo/</link>
     <description>Recent content in Dubbo on 飞鸿</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; &lt;a href=&#34;//github.com/ysdxz207&#34; target=&#34;_blank&#34;&gt;ysdxz207&lt;/a&gt; 2017</copyright>
     <lastBuildDate>Tue, 21 Feb 2017 11:11:26 +0800</lastBuildDate>
     
-	<atom:link href="http://puyixiaowo.win/tags/dubbo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://hupubao.win/tags/dubbo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>mybatis延迟加载导致dubbo值为null解决办法</title>
-      <link>http://puyixiaowo.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <link>http://hupubao.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Tue, 21 Feb 2017 11:11:26 +0800</pubDate>
       
-      <guid>http://puyixiaowo.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <guid>http://hupubao.win/post/mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%AF%BC%E8%87%B4dubbo%E5%80%BC%E4%B8%BAnull%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <description>场景条件：
 1、bean里有两个属性：
 private String subjectCategoryName;//分类名 private String className;//班级分类名称  2、使用mybatis嵌套查询：
