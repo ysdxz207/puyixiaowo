@@ -72,12 +72,6 @@
   </url>
   
   <url>
-    <loc>http://hupubao.win/tags/</loc>
-    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://hupubao.win/categories/</loc>
     <priority>0</priority>
   </url>
@@ -137,26 +131,26 @@
   </url>
   
   <url>
-    <loc>http://hupubao.win/categories/mybatis/</loc>
-    <lastmod>2017-04-26T14:06:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://hupubao.win/tags/mybatis/</loc>
     <lastmod>2017-04-26T14:06:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hupubao.win/categories/mysql/</loc>
-    <lastmod>2017-05-19T17:22:37+08:00</lastmod>
+    <loc>http://hupubao.win/categories/mybatis/</loc>
+    <lastmod>2017-04-26T14:06:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://hupubao.win/tags/mysql/</loc>
     <lastmod>2015-10-23T11:43:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hupubao.win/categories/mysql/</loc>
+    <lastmod>2017-05-19T17:22:37+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -180,7 +174,7 @@
   
   <url>
     <loc>http://hupubao.win/tags/</loc>
-    <lastmod>2017-06-29T21:46:29+08:00</lastmod>
+    <lastmod>2015-11-04T17:12:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
